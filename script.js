@@ -1,5 +1,3 @@
-// questao 1
-
 let a = 10;
 let b = 10;
 let c = 10;
@@ -38,7 +36,7 @@ function somaComMedia() {
 
 
 // questao 4
-console.log("Converter valor de Celsius para Farenheit:")
+//console.log("Converter valor de Celsius para Farenheit:")
 
 
 function converterGraus() {
@@ -84,21 +82,61 @@ function numerosImpares() {
 }
 //numerosImpares();
 
+// questao 7
+ 
+let semana = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sabado']; 
+
+function qualDiaDaSemana(dia){
+
+    semana.forEach(diaSemana =>{
+        if(dia.toLowerCase() === diaSemana){
+            console.log(`Este é o ${semana.findIndex(i => i === diaSemana)+1}° dia da semana`);            
+        }
+    });
+}
+//qualDiaDaSemana('QUARTA-FEIRA');
+
+//questao 8 tabuada
+
+    let numero = 6;
+    for(let i = 0; i <= 10; i++){
+       let resultado = numero * i;
+   //    console.log(numero + " x " + i + " = " + resultado);    
+}
+
+// questao 9
+
+//criando meu array
+let listaProgramaçao = ['html','css','js','mongodb','express','react','nodejs']
+//console.log(listaProgramaçao);
 
 
+//adicionando 1 item ao final do array
+listaProgramaçao.push('postgres')
+//console.log(listaProgramaçao);
 
 
+//adicionando 2 itens no inicio do array
+listaProgramaçao.splice(0,0,'conceitos de web','conceitos de redes');
+//console.log(listaProgramaçao);
 
 
+//removendo ultimo item
+ listaProgramaçao.splice(9,1);
+ //console.log(listaProgramaçao);
 
 
+ //remover primeiro item na posição 0 e apenas 1 item.
+ listaProgramaçao.splice(0,1);
+ //console.log(listaProgramaçao);
 
 
-
-
-
-
-
-
-
+ //função que remover qualquer item
+function removerElementos(programa){
+    const index = listaProgramaçao.indexOf(programa);
+    
+    listaProgramaçao.splice(index,1);
+  console.log(listaProgramaçao);
+}
+removerElementos('js');
 
