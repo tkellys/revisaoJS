@@ -131,12 +131,18 @@ listaProgramaçao.splice(0,0,'conceitos de web','conceitos de redes');
  //console.log(listaProgramaçao);
 
 
- //função que remover qualquer item
+ //função que remover qualquer item questao 9 e 10
+
 function removerElementos(programa){
-    const index = listaProgramaçao.indexOf(programa);
-    
-    listaProgramaçao.splice(index,1);
-  console.log(listaProgramaçao);
+    let listaProgramaçao2 = ['html','css','js','mongodb','express','react','nodejs']
+    const index = listaProgramaçao2.indexOf(programa);
+    console.log('A lista original é:'+ listaProgramaçao2);
+    console.log('---------------------')
+    listaProgramaçao2.splice(index,1);
+    console.log('O item exluido é:'+ programa);
+    console.log('---------------------')
+
+    console.log('A lista final é:' + listaProgramaçao2);
 }
 removerElementos('js');
 
