@@ -98,11 +98,13 @@ function qualDiaDaSemana(dia){
 
 //questao 8 tabuada
 
-    let numero = 6;
+   function tabuada (n){
     for(let i = 0; i <= 10; i++){
-       let resultado = numero * i;
-   //    console.log(numero + " x " + i + " = " + resultado);    
+       console.log(`${n} x ${i} = ${n*i}`);    
 }
+   }
+   //tabuada(9);
+
 
 // questao 9
 
@@ -112,25 +114,38 @@ let listaProgramaçao = ['html','css','js','mongodb','express','react','nodejs']
 
 
 //adicionando 1 item ao final do array
-listaProgramaçao.push('postgres')
+listaProgramaçao.push('postgres');
 //console.log(listaProgramaçao);
 
 
-//adicionando 2 itens no inicio do array
+//  adicionando 2 itens no inicio do array usando splice ou unshift ou criando novo Array
 listaProgramaçao.splice(0,0,'conceitos de web','conceitos de redes');
 //console.log(listaProgramaçao);
 
+listaProgramaçao.unshift("Conceitos de Web");
+listaProgramaçao.unshift("Conceitos de redes");
+//console.log(listaProgramaçao);
 
-//removendo ultimo item
+let listaNova = ['conceito de web','conceitos de rede', ...listaProgramaçao]
+//console.log(listaNova);
+
+
+//removendo ultimo item com splice ou pop
  listaProgramaçao.splice(9,1);
  //console.log(listaProgramaçao);
 
+ listaNova.pop();
+ //console.log(listaNova);
 
- //remover primeiro item na posição 0 e apenas 1 item.
+
+ //remover primeiro item na posição 0 e apenas 1 item ou usando shift.
  listaProgramaçao.splice(0,1);
  //console.log(listaProgramaçao);
 
+ listaNova.shift();
+ //console.log(listaNova);
 
+ 
  //função que remover qualquer item questao 9 e 10
 
 function removerElementos(programa){
@@ -144,5 +159,5 @@ function removerElementos(programa){
 
     console.log('A lista final é:' + listaProgramaçao2);
 }
-removerElementos('js');
+//removerElementos('js');
 
